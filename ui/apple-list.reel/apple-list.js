@@ -10,16 +10,20 @@ var Component = require("montage/ui/component").Component;
 exports.AppleList = Component.specialize(/** @lends AppleList# */ {
     
     applesList: {
-        value: ["Белые", "Красные", "Зеленые", "Синии", "Оранжевые", "Бирюзовые", "Фиолетовые"]
+        value: []
     },
     
     constructor: {
         value: function AppleList() {
             this.super();
-            
-          
-            
-            
+
+            var _this = this;
+            request.get('apples').then(function(res) {
+                _this.applesList = res.data;
+            }).catch(function(exp) {
+                console.log(exp);
+            });
+
         }
     }
 });
