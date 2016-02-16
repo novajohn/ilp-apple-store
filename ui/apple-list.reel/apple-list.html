@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="apple-list.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "appleItem": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "appleItem"},
+                "value": "Text"
+            },
+            "bindings": {
+                "value": {"<-": "@apples:iteration.object"}
+            }
+        },
+        "apples": {
+            "prototype": "montage/ui/repetition.reel",
+            "properties": {
+                "element": {"#": "apples"}
+            },
+            "bindings": {
+                "content": {"<-": "@owner.applesList"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="AppleList">
+        <ul data-montage-id="apples">
+            <li data-montage-id="appleItem"></li>
+        </ul>
+    </div>
+</body>
+</html>

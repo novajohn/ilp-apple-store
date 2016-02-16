@@ -2,21 +2,66 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Main</title>
-
+    <title>
+        Main
+    </title>
     <link rel="stylesheet" href="main.css">
-
     <script type="text/montage-serialization">
-        {
-            "owner": {
-                "properties": {
-                    "element": {"#": "main"}
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "main"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "false"
+            }
+        },
+        "addAppleButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "addAppleButton"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "false",
+                "enabled": true,
+                "label": "Add Apple"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
                 }
+            ]
+        },
+        "appleAddForm": {
+            "prototype": "ui/apple-add-form.reel",
+            "properties": {
+                "element": {"#": "appleAddForm"}
+            }
+        },
+        "appleList": {
+            "prototype": "ui/apple-list.reel",
+            "properties": {
+                "element": {"#": "appleList"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "false"
             }
         }
+    }
     </script>
 </head>
 <body>
-    <div data-montage-id="main" data-montage-skin="light" class="Main"></div>
+    <div data-montage-id="main" data-montage-skin="light" class="Main">
+        <header class="Header">
+            Apple Store
+            <button data-montage-id="addAppleButton"></button>
+        </header>
+        <div class="Content">
+            <div data-montage-id="appleList"></div>
+        </div>
+        <div data-montage-id="appleAddForm"></div>
+    </div>
 </body>
 </html>

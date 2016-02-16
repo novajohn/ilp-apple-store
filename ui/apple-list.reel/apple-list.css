@@ -1,0 +1,26 @@
+.AppleList {
+    width: 100%;
+}
+
+.AppleList ul {
+    margin: 0;
+    padding: 0;
+}
+
+.AppleList ul li {
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+}
+
+.AppleLidst ul li:first-child {
+     border-top: none;
+}
+
+.AppleLidst ul li:last-child {
+    border-bottom: none;
+}
+
+.AppleList ul li:nth-child(odd) {
+    background-color: rgba(0, 0, 0, .1);
+}

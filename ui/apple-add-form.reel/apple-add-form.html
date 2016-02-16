@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="apple-add-form.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            },
+            "bindings": {
+                "classList.has('isShown')": {"<-": "@owner.isShown"}
+            }
+        },
+        "addButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "addButton"},
+                "enabled": true,
+                "label": "Add Apple"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "cancelButton": {
+            "prototype": "digit/ui/button.reel",
+            "properties": {
+                "element": {"#": "cancelButton"},
+                "enabled": true,
+                "label": "Cancel"
+            },
+            "listeners": [
+                {
+                    "type": "action",
+                    "useCapture": false,
+                    "listener": {"@": "owner"}
+                }
+            ]
+        },
+        "descriptionTextArea": {
+            "prototype": "digit/ui/text-area.reel",
+            "properties": {
+                "element": {"#": "descriptionTextArea"}
+            }
+        },
+        "priceNumber": {
+            "prototype": "digit/ui/number-field.reel",
+            "properties": {
+                "element": {"#": "priceNumber"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "false",
+                "value": 100
+            }
+        },
+        "varietyTextField": {
+            "prototype": "digit/ui/text-field.reel",
+            "properties": {
+                "element": {"#": "varietyTextField"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "false"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <div data-montage-id="owner" class="AppleAddForm">
+        <label>
+            <div>
+                Variety:
+            </div>
+            <input data-montage-id="varietyTextField" type="text">
+        </label>
+        <label>
+            <div>
+                Description:
+            </div>
+            <textarea data-montage-id="descriptionTextArea"></textarea>
+        </label>
+        <label>
+            Price:
+            <input type="number" data-montage-id="priceNumber">
+            $/kg.
+        </label>
+        <div class="Buttons">
+            <button data-montage-id="addButton"></button>
+            <button data-montage-id="cancelButton"></button>
+        </div>
+    </div>
+</body>
+</html>

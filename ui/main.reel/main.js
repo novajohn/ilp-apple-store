@@ -11,6 +11,17 @@ exports.Main = Component.specialize(/** @lends Main# */ {
     constructor: {
         value: function Main() {
             this.super();
+            
+            console.log('constructor');
+        }
+    },
+
+    handleAddAppleButtonAction: {
+        value: function (event) {
+            
+            this.templateObjects.appleAddForm.isShown = true;
+            
         }
     }
+
 });

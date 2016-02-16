@@ -1,0 +1,40 @@
+.AppleAddForm {
+    padding: 16px;
+    background-color: #EEE;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    display: none;
+}
+
+.AppleAddForm.isShown {
+    display: block;
+}
+    
+.AppleAddForm label {
+    color: #004400;
+    margin: 8px 0;
+}
+
+.AppleAddForm .Buttons {
+    margin: 32px 16px 0 16px;
+}
+
+.AppleAddForm input,
+.AppleAddForm textarea,
+.AppleAddForm .Buttons button {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.AppleAddForm .digit-NumberField-input {
+    margin: 0;
+}
+
+
+.AppleAddForm .Buttons button:first-child {
+    font-weight: bold;
+    color: #193922;
+}
+
+.AppleAddForm textarea {
+    height: 80px;
+}
