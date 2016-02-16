@@ -14,17 +14,14 @@
     "prototype": "montage/core/meta/module-blueprint",
     "properties": {
       "name": null,
-      "blueprintModule": {
-        "%": "ui/apple-list.reel/apple-list.meta"
-      },
       "parent": {"@": "blueprint_component_reference"},
       "propertyBlueprintGroups": {
-        "AppleList": []
+        "AppleItem": []
       },
       "module": {
-        "%": "ui/apple-list.reel"
+        "%": "ui/apple-item.reel"
       },
-      "exportName": "AppleList"
+      "exportName": "AppleItem"
     }
   }
 }

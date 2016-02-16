@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="apple-item.css">
+    <script type="text/montage-serialization">
+    {
+        "owner": {
+            "properties": {
+                "element": {"#": "owner"}
+            }
+        },
+        "descriptionText": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "descriptionText"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "false"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.model.description"}
+            }
+        },
+        "priceText": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "priceText"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "false"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.model.price + '$/kg'"}
+            }
+        },
+        "varietyText": {
+            "prototype": "montage/ui/text.reel",
+            "properties": {
+                "element": {"#": "varietyText"},
+                "contenteditable": "false",
+                "dir": "ltr",
+                "draggable": "false"
+            },
+            "bindings": {
+                "value": {"<-": "@owner.model.variety"}
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <li data-montage-id="owner" class="AppleItem">
+        <span data-montage-id="varietyText" class="AppleVariety"></span>
+        <span data-montage-id="priceText" class="ApplePrice"></span>
+        <div data-montage-id="descriptionText" class="AppleDescription"></div>
+    </li>
+</body>
+</html>

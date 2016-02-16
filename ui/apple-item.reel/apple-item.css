@@ -1,0 +1,17 @@
+.AppleVariety {
+    font-size: larger;
+    font-weight: bold;
+    text-shadow: 0 1px 0px rgba(255, 255, 255, .3);
+}
+
+.ApplePrice {
+    float: right;
+    color: #29190A;
+    font-weight: bold;
+}
+
+.AppleDescription {
+    margin-top: 8px;
+    font-size: smaller;
+    font-style: italic;
+}

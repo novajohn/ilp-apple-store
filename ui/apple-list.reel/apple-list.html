@@ -11,13 +11,12 @@
             }
         },
         "appleItem": {
-            "prototype": "montage/ui/text.reel",
+            "prototype": "ui/apple-item.reel",
             "properties": {
-                "element": {"#": "appleItem"},
-                "value": "Text"
+                "element": {"#": "appleItem"}
             },
             "bindings": {
-                "value": {"<-": "@apples:iteration.object.variety"}
+                "model": {"<-": "@apples:iteration.object"}
             }
         },
         "apples": {
