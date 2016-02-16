@@ -38,3 +38,8 @@
 .AppleAddForm textarea {
     height: 80px;
 }
+
+.AppleAddForm input.NotValid,
+.AppleAddForm textarea.NotValid {
+    border-color: red;
+}
