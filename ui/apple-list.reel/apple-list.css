@@ -9,6 +9,7 @@
 
 .AppleList ul li {
     padding: 16px 24px;
+    color: #193922;
     border-top: 1px solid rgba(255, 255, 255, .5);
     border-bottom: 1px solid rgba(0, 0, 0, .4);
 }
@@ -22,5 +23,9 @@
 }
 
 .AppleList ul li:nth-child(odd) {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 255, 0, .2);
+}
+
+.AppleList ul li:nth-child(even) {
+    background-color: rgba(0, 255, 0, .1);
 }
